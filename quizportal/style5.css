@@ -1,0 +1,294 @@
+/* css used for about us section */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+.nav {
+  height: 85px;
+  width: 100%;
+  background-color: #6c6969;
+  position: relative;
+}
+.nav > .nav-header {
+  display: inline;
+}
+
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 45px;
+  font-weight: 550;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px 10px 10px 10px;
+  margin-left: 25px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  background: url(back.png);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+@keyframes back{
+  100%{
+      background-position: 2000px 0;
+  }
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > ul li a{
+  display: block;
+  padding: 0 4px;
+  color: #fff;
+  line-height: 40px;
+  font-size: 18px;
+  text-decoration: none;
+
+}
+.nav > .nav-links > ul{
+  padding: 0;
+  margin-top: 5px;
+  list-style: none;
+  position: relative;
+  
+}
+.nav > .nav-links > ul li{
+  padding: 20px;
+  display: inline-block;
+  background-color: #6c6969;
+   
+}
+
+.nav > .nav-links > ul li:hover{
+    background-color: black;
+    border-radius: 5px;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+.nav .nav-links ul a.icon{
+margin-left: 25px;
+margin-right: 10px;
+}
+
+.nav .nav-links ul a i{
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 7px;
+  margin-left: 5px;
+}
+
+
+@media (max-width:750px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > ul li a {
+    display: block;
+    width: 100%;
+  }
+
+    .nav > .nav-links > ul li{
+      display: block;
+      margin-bottom: 20px;
+      padding: 0;
+      background-color: #333;
+       
+    }
+    .nav > .nav-links > ul li a{
+        margin-left: 40%;
+    }
+    .nav .nav-links ul a.icon{
+      margin-left: 33%;
+    }
+
+
+      .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+
+
+.btnlogin-popup {
+  width:130px;
+  height: 50px;
+  background: transparent;
+  border:2px solid #fff;
+  outline: none;
+  border-radius:6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color:#fff;
+  font-weight: 500;
+}
+
+.btnlogin-popup:hover {
+  background: #fff;
+  color: #162938;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.column {
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+h1 {
+  margin-top: 80px;
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  color: #1f003b;
+}
+
+.card {
+  box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+  padding: 3em 1em;
+  border-radius: 0.6em;
+  color: #1f003b;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffffff;
+
+}
+
+.card .img-container {
+  width: 8em;
+  height: 8em;
+  background-color: #a993ff;
+  padding: 0.5em;
+  border-radius: 50%;
+  margin: 0 auto 2em auto;
+}
+
+.card img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.card h3 {
+  font-weight: 500;
+}
+
+.card p {
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 0.5em 0 2em 0;
+  letter-spacing: 2px;
+}
+
+.icons {
+  width: 50%;
+  min-width: 180px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.4em;
+}
+
+.card:hover {
+  background: linear-gradient(#6045ea, #8567f7);
+  color: #ffffff;
+}
+
+.card:hover .img-container {
+  transform: scale(1.15);
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    padding: 1em 7em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em;
+  }
+
+  .card {
+    padding: 5em 1em;
+  }
+
+  .column {
+    align-self: center;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 1em 1em;
+  }
+}
+
+.column_1 {
+  margin-left: 15%;
+}
+
+.column_1 {
+  align-self: center;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 1em 1em;
+}
